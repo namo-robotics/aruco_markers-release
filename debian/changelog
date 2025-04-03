@@ -1,8 +1,0 @@
-ros-humble-aruco-markers-msgs (0.0.1-1jammy) jammy; urgency=high
-
-  * rename to aruco_markers
-  * Contributors: David Brown
-
- -- David Brown <davewbrwn@gmail.com>  Wed, 02 Apr 2025 22:00:00 -0000
-
-
