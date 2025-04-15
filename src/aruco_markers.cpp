@@ -24,8 +24,8 @@ public:
   {
     this->declare_parameter("marker_size", 0.1);
     this->declare_parameter("camera_frame", "camera_rgb_optical_frame");
-    this->declare_parameter("image_topic", "/camera/color/image_raw");
-    this->declare_parameter("camera_info_topic", "/camera/color/camera_info");
+    this->declare_parameter("image_topic", "camera/color/image_raw");
+    this->declare_parameter("camera_info_topic", "camera/color/camera_info");
     this->declare_parameter("dictionary", "DICT_ARUCO_ORIGINAL");
 
     marker_size_ = this->get_parameter("marker_size").as_double();
@@ -54,10 +54,10 @@ public:
     // Publisher for marker information
     marker_info_publisher_ = this->create_publisher<std_msgs::msg::String>("aruco_marker_info", 10);
     marker_array_pub_ = this->create_publisher<aruco_markers_msgs::msg::MarkerArray>(
-      "/aruco/markers", 10);
+      "aruco/markers", 10);
 
     // Image publisher
-    image_pub_ = this->create_publisher<sensor_msgs::msg::Image>("/aruco/result", 10);
+    image_pub_ = this->create_publisher<sensor_msgs::msg::Image>("aruco/result", 10);
 
     // TF broadcaster for publishing transforms
     tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(*this);

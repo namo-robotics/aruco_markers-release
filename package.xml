@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>aruco_markers</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <description>A ros2 node for detecting aruco markers in camera images</description>
   <maintainer email="davewbrwn@gmail.com">David Brown</maintainer>
   <license>MIT</license>
@@ -13,23 +13,14 @@
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
-  <build_depend>libopencv-dev</build_depend>
-  <build_depend>image_transport</build_depend>
-  <build_depend>cv_bridge</build_depend>
-  <build_depend>tf2_ros</build_depend>
-  <build_depend>geometry_msgs</build_depend>
-  <build_depend>sensor_msgs</build_depend>
-  <build_depend>aruco_markers_msgs</build_depend>
-  <build_depend>tf2_geometry_msgs</build_depend>
-
-  <exec_depend>libopencv-dev</exec_depend>
-  <exec_depend>image_transport</exec_depend>
-  <exec_depend>cv_bridge</exec_depend>
-  <exec_depend>tf2_ros</exec_depend>
-  <exec_depend>geometry_msgs</exec_depend>
-  <exec_depend>sensor_msgs</exec_depend>
-  <exec_depend>aruco_markers_msgs</exec_depend>
-  <exec_depend>tf2_geometry_msgs</exec_depend>
+  <depend>libopencv-dev</depend>
+  <depend>image_transport</depend>
+  <depend>cv_bridge</depend>
+  <depend>tf2_ros</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>aruco_markers_msgs</depend>
+  <depend>tf2_geometry_msgs</depend>
 
   <export>
     <build_type>ament_cmake</build_type>
