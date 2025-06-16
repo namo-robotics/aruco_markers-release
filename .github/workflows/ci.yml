@@ -2,9 +2,9 @@ name: ROS 2 CI
 
 on:
   push:
-    branches: [ rolling ]
+    branches: [ jazzy ]
   pull_request:
-    branches: [ rolling ]
+    branches: [ jazzy]
 
 jobs:
   build_and_test:

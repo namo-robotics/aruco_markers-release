@@ -29,7 +29,6 @@ public:
   ArucoMarkersNode();
   void initialize();
   void process_camera_info(const sensor_msgs::msg::CameraInfo & msg);
-  std::string camera_info_topic_;
 
   bool hasReceivedCameraInfo() const
   {
@@ -79,6 +78,7 @@ private:
   double marker_size_;
   std::string camera_frame_;
   std::string image_topic_;
+  std::string camera_info_topic_;
   std::string dictionary_;
   tf2_ros::Buffer tf_buffer_;
   tf2_ros::TransformListener tf_listener_;
