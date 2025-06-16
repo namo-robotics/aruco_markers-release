@@ -1,3 +1,28 @@
+## aruco_markers (rolling) - 0.0.0-1
+
+The packages in the `aruco_markers` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --edit-track --ros-distro rolling --track rolling aruco_markers` on `Mon, 16 Jun 2025 07:34:54 -0000`
+
+These packages were released:
+- `aruco_markers`
+- `aruco_markers_msgs`
+
+Version of package(s) in repository `aruco_markers`:
+
+- upstream repository: https://github.com/namo-robotics/aruco_markers.git
+- release repository: https://github.com/namo-robotics/aruco_markers-release.git
+- rosdistro version: `0.0.2-1`
+- old version: `0.0.2-1`
+- new version: `0.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## aruco_markers (rolling) - 0.0.2-1
 
 The packages in the `aruco_markers` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --new-track --rosdistro rolling --track rolling aruco_markers` on `Thu, 12 Jun 2025 10:01:28 -0000`
