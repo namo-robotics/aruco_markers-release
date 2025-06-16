@@ -4,12 +4,12 @@ A ros2 package for [detecting ArUco markers](https://docs.opencv.org/4.x/d5/dae/
 This package provides a ros2 node that listens to a camera image topic, detects all markers using OpenCV, and publishes them as an array, including their poses relative to the camera frame.
 It has been tested in ros2 Humble, Iron, and Jazzy.
 
-## Install Dependencies
+## Dependencies
 
-Install all system dependencies listed in `aruco_markers/package.xml`.
+The package depends at the very leas on ros2 and OpenCV. You can install OpenCV with:
 
 ```bash
-rosdep install --from-paths aruco_markers -r -y
+sudo apt install libopencv-dev
 ```
 
 ## build
