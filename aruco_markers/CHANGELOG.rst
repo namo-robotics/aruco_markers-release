@@ -2,16 +2,16 @@
 Changelog for package aruco_markers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.0.1 (2025-06-16)
+0.0.2 (2025-04-15)
 ------------------
-* jazzy
-* rolling
+* support namespacing of topic names
+* Contributors: David Brown
+
+0.0.1 (2025-04-03)
+------------------
 * uncrustify
-* uncrustify
+* add tf2_geometry_msgs dep
 * fix opencv dependency
-* fix opencv dependency
-* Merge pull request `#2 <https://github.com/namo-robotics/aruco_markers/issues/2>`_ from namo-robotics/jazzy
-  Jazzy
 * complete renaming
 * rename to aruco_markers
 * Contributors: David Brown
