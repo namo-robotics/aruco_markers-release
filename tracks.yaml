@@ -69,8 +69,8 @@ tracks:
     - git-bloom-generate -y rosrpm --prefix release/:{ros_distro} :{ros_distro} -i
       :{release_inc} --os-name rhel
     devel_branch: rolling
-    last_release: rolling-0.0.0
-    last_version: 0.0.0
+    last_release: rolling-0.0.4
+    last_version: 0.0.4
     name: upstream
     patches: null
     release_inc: '1'
