@@ -6,7 +6,7 @@
 #include <sensor_msgs/msg/image.hpp>
 #include <opencv2/opencv.hpp>
 #include <opencv2/aruco.hpp>
-#include <cv_bridge/cv_bridge.h>
+#include <cv_bridge/cv_bridge.hpp>
 #include <image_transport/image_transport.hpp>
 #include <tf2_ros/transform_broadcaster.h>
 #include <geometry_msgs/msg/transform_stamped.hpp>
@@ -29,6 +29,7 @@ public:
   ArucoMarkersNode();
   void initialize();
   void process_camera_info(const sensor_msgs::msg::CameraInfo & msg);
+  std::string camera_info_topic_;
 
   bool hasReceivedCameraInfo() const
   {
@@ -78,7 +79,6 @@ private:
   double marker_size_;
   std::string camera_frame_;
   std::string image_topic_;
-  std::string camera_info_topic_;
   std::string dictionary_;
   tf2_ros::Buffer tf_buffer_;
   tf2_ros::TransformListener tf_listener_;

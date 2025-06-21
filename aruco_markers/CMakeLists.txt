@@ -25,18 +25,19 @@ target_include_directories(aruco_markers_lib PUBLIC
   $<INSTALL_INTERFACE:include>
   ${OpenCV_INCLUDE_DIRS}
 )
-ament_target_dependencies(aruco_markers_lib
-  rclcpp
-  std_msgs
-  sensor_msgs
-  image_transport
-  cv_bridge
-  tf2_ros
-  geometry_msgs
-  aruco_markers_msgs
-  tf2_geometry_msgs
+target_link_libraries(aruco_markers_lib PUBLIC
+  ${OpenCV_LIBRARIES}
+  ${aruco_markers_msgs_TARGETS}
+  ${geometry_msgs_TARGETS}
+  ${sensor_msgs_TARGETS}
+  ${std_msgs_TARGETS}
+  cv_bridge::cv_bridge
+  image_transport::image_transport
+  rclcpp::rclcpp
+  sensor_msgs::sensor_msgs_library
+  tf2_geometry_msgs::tf2_geometry_msgs
+  tf2_ros::tf2_ros
 )
-target_link_libraries(aruco_markers_lib ${OpenCV_LIBRARIES})
 
 # Create the executable for the node
 add_executable(aruco_markers src/main.cpp)
@@ -46,17 +47,6 @@ target_include_directories(aruco_markers PUBLIC
   ${OpenCV_INCLUDE_DIRS}
 )
 target_link_libraries(aruco_markers aruco_markers_lib ${OpenCV_LIBRARIES})
-ament_target_dependencies(aruco_markers
-  rclcpp
-  std_msgs
-  sensor_msgs
-  image_transport
-  cv_bridge
-  tf2_ros
-  geometry_msgs
-  aruco_markers_msgs
-  tf2_geometry_msgs
-)
 
 # Install targets
 install(TARGETS aruco_markers_lib
@@ -87,16 +77,6 @@ if(BUILD_TESTING)
     ${OpenCV_INCLUDE_DIRS}
   )
   target_link_libraries(test_aruco_markers aruco_markers_lib ${OpenCV_LIBRARIES})
-  ament_target_dependencies(test_aruco_markers
-    rclcpp
-    std_msgs
-    sensor_msgs
-    cv_bridge
-    image_transport
-    tf2_ros
-    aruco_markers_msgs
-    tf2_geometry_msgs
-  )
 endif()
 
 ament_package()
