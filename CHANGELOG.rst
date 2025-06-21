@@ -2,8 +2,8 @@
 Changelog for package aruco_markers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.1 (2025-06-21)
+------------------
 * add unit tests
 * rolling
 * uncrustify
